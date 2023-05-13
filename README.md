@@ -30,9 +30,8 @@ I also wanted to visualize the flow of information through the hidden layers of 
   - [Data source](#data-source)
   - [Methods](#methods)
   - [Tech Stack](#tech-stack)
-  - [Quick Peek at Results](#quick-peek-at-results)
-  - [Conclusions and Lessons Learned](#conclusions-and-lessons-learned)
-  - [Limitations and Further Improvements](#limitations-and-further-improvements)
+  - [Results](#results)
+  - [Conclusions](#conclusions)
   - [License](#license)
 
 
@@ -121,10 +120,9 @@ Data used for the text classification task is [AG News](https://huggingface.co/d
 | 3 : Sci/Tech   | 0.91      | 0.90   | 0.91     |
 
 
-## Conclusions and Lessons Learned
+## Conclusions
 
 Task-Adaptive Pre-Training clearly sharpens the contextual learnings of the model over the broadly pre-trained distilROBERTa. 
-
 
 Overall, the DistilROBERTa TAPT model clearly yields better accuracy compared to the base model. But this improvement in performance comes with the additional time cost taken to train the model (135 minutes for fine-tuning distilROBERTa and 587 minutes for TAPT only on my GPU). However, if the cost of miss-classification is high in situations where accuracy is the main objective and cannot be compromised on, using TAPT to further train Language Models should be the preferred method as the boost in performance may be worth the additional cost of training. On the other hand, continuing with a base model may be reasonable in situations with limited computing resources/time-to-train the model which comes with a cost of slightly lower accuracy.
 
