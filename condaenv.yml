@@ -1,0 +1,21 @@
+name: dlproject
+channels:
+  - conda-forge
+dependencies:
+  - python==3.10
+  - anaconda::numpy
+  - anaconda::seaborn
+  - conda-forge::tqdm
+  - conda-forge::jupyter
+  - conda-forge::notebook
+  - conda-forge::ipykernel
+  - anaconda::pandas
+  - anaconda::scikit-learn
+  - pytorch::pytorch
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - pytorch::torchtext
+  - nvidia::pytorch-cuda==11.8
+  - conda-forge::spacy
+  - huggingface::transformers
+
